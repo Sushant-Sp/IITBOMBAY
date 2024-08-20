@@ -20,14 +20,14 @@ public class CourseInstanceEntity {
     @Column(name = "year")
     private int year;
     @Column(name = "semester")
-    private int semester;
+    private Long semester;
 
-    @Column(name = "course_id")
-    private Long course_id;
-
-    @ManyToOne
-    @JoinColumn(name = "course_id", insertable = false, updatable = false)
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "course_id", referencedColumnName = "course_id")
     private CourseEntity course;
+
+
+
 
 
 }
