@@ -20,8 +20,11 @@ public class CourseEntity {
         @Column(name = "course_id")
         private Long id;
 
-        @Column(name = "name")
-        private String name;
+        @Column(name = "title")
+        private String title;
+
+        @Column(name = "code")
+        private Long code;
 
         @Column(name = "description")
         private String description;

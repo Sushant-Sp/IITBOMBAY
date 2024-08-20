@@ -12,6 +12,7 @@ import lombok.Setter;
 public class Course {
 
 private Long id;
-private String name;
+private String title;
+private Long  code;
 private String description;
 }
