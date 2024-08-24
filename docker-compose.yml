@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  iitb-assignment:
+    image: iitb-assignment:latest  # Use a custom image built from Dockerfile
+    build: .     # Build the image from the current directory
+    ports:
+      - "8080:8080"  # Map container port 8080 to host port 8080
+    environment:
+      SPRING_APPLICATION_NAME: IITB
+      SPRING_DATASOURCE_URL: jdbc:mariadb://mariadb:3307/Assignment  # Connect to MariaDB container
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: sushant99
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.mariadb.jdbc.Driver
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+
